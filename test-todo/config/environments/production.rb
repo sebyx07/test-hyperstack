@@ -44,7 +44,7 @@ Rails.application.configure do
   # Mount Action Cable outside main process or domain
   config.action_cable.mount_path = "/cable"
   config.action_cable.allowed_request_origins = ['http://rr8g.hatchboxapp.com']
-  config.web_socket_server_url = "ws://rr8g.hatchboxapp.com/"
+  config.web_socket_server_url = "ws://rr8g.hatchboxapp.com/cable"
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
