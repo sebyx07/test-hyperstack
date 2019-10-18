@@ -11,7 +11,13 @@ class App < HyperComponent
       # see the hyper-router gem documentation for more details
 
       H1 { "Hello world from Hyperstack!" }
-      H1 { "Number of Todos: #{Todo.count}" }
+      UL do
+        Todo.all.each_with_index do |todo, i|
+          LI do
+            SPAN { todo.title + todo.id.to_s }
+          end
+        end
+      end
     end
   end
 end
