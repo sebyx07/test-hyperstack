@@ -54,7 +54,10 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem "rails-hyperstack", "~> 1.0.alpha1.0"
+gem 'rails-hyperstack',
+    git: 'git://github.com/hyperstack-org/hyperstack.git',
+    branch: 'edge',
+    glob: 'ruby/*/*.gemspec'
 
 group :development do
   gem 'foreman'
@@ -64,4 +67,6 @@ gem 'webpacker'
 
 group :production do
   gem "pg", ">= 0.18", "< 2.0"
+end
+group :development do
 end

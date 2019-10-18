@@ -22,6 +22,8 @@ class TodoItem < HyperComponent
   end
 
   def remove_todo
-    A { "-X-" }.on(:click) { todo.destroy }
+    Mui.Button(variant: :contained, color: :primary) { "Delete" }.on(:click) do
+      todo.destroy
+    end
   end
 end
