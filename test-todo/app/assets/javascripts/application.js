@@ -11,5 +11,4 @@
 // about supported directives.
 //
 //= require hyperstack-loader
-//= require hyperstack-loader
 //= require_tree .
